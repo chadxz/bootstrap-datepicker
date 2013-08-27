@@ -41,7 +41,7 @@
 		this.element = $(element);
 		this.isInline = false;
 		this.isInput = this.element.is('input');
-		this.component = this.element.is('.date') ? this.element.find('.add-on, .btn') : false;
+		this.component = this.element.is('.date') ? this.element.find('.add-on, .btn, .input-group-addon') : false;
 		this.hasInput = this.component && this.element.find('input').length;
 		if(this.component && this.component.length === 0)
 			this.component = false;
@@ -59,7 +59,7 @@
 		if (this.o.rtl){
 			this.picker.addClass('datepicker-rtl');
 			this.picker.find('.prev i, .next i')
-						.toggleClass('icon-arrow-left icon-arrow-right');
+						.toggleClass('icon-chevron-left icon-chevron-right');
 		}
 
 
@@ -1347,14 +1347,14 @@
 								'</table>'+
 							'</div>'+
 							'<div class="datepicker-months">'+
-								'<table class="table-condensed">'+
+								'<table class="table table-condensed">'+
 									DPGlobal.headTemplate+
 									DPGlobal.contTemplate+
 									DPGlobal.footTemplate+
 								'</table>'+
 							'</div>'+
 							'<div class="datepicker-years">'+
-								'<table class="table-condensed">'+
+								'<table class="table table-condensed">'+
 									DPGlobal.headTemplate+
 									DPGlobal.contTemplate+
 									DPGlobal.footTemplate+
